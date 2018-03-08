@@ -1,0 +1,35 @@
+{
+	"variables": [],
+	"info": {
+		"name": "git",
+		"_postman_id": "858644e4-f033-dc64-b27b-6ab5ae7305d2",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var usersURL = \"https://api.github.com/users/jogijatin15\"\r",
+							"tests[\"Testcase 1 - Gets the correct users url\"] = jsonData.url === usersURL;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{githubapi}}/jogijatin15",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

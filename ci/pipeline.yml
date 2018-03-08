@@ -1,0 +1,15 @@
+resources:
+- name: github-api
+  type: git
+  source:
+    uri: https://github.com/jogijatin15/github-api.git
+    branch: master
+    
+jobs:
+- name: Functional Test
+  max_in_flight: 1
+  plan:
+  - get: github-api
+    trigger: true
+  - task: Functional Test
+    file: github-api/ci/functional-test.yml

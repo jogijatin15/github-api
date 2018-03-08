@@ -1,0 +1,14 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: node
+    tag: "7"
+  
+inputs:
+- name: github-api
+
+run:
+  path: sh
+  args: ['./github-api/ci/scripts/functional-test.sh']
