@@ -55,7 +55,7 @@ cp *.xml ../../../../../tests
 cd ../../../../../
 pwd
 ls -ltr
-cd tests
+#cd tests
 
 if [ "$TEST_FAILURE" -eq 1 ]; then
 	echo "Exiting with exit code 1..."
