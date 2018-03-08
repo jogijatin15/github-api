@@ -3,7 +3,7 @@ set -e -x
 ls -las
 
 #TESTDIR="tests"
-#if [ -d "$TESTDIR" ]; then	
+#if [ -d "$TESTDIR" ]; then
 #	chmod 777 tests
 #	rm -rf tests
 #	mkdir tests
@@ -28,7 +28,7 @@ ls -las
 
 ls -ltr
 
-cd src/test/api
+cd github-api/src/test/api
 
 echo "Installing newman ..."
 npm install -g newman
@@ -36,7 +36,7 @@ echo "Installed newman ..."
 
 newman run collections/git.postman_collection.json --environment collections/newman-env.postman_environment.json --reporters cli,junit,html --reporter-junit-export testresults/unformatted/xmlOut.xml --reporter-html-export testresults/unformatted/htmlOut.html
 
-if [ $? -ne 0 ]; then  
+if [ $? -ne 0 ]; then
 	TEST_FAILURE = 1
 fi
 
