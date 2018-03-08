@@ -55,8 +55,6 @@ cp *.xml ../../../../../tests
 cd ../../../../../
 pwd
 ls -ltr
-cd github-api
-ls -ltr
 cd tests
 
 if [ "$TEST_FAILURE" -eq 1 ]; then
