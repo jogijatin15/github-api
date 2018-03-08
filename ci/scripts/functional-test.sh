@@ -54,8 +54,10 @@ cp *.xml ../../../../../tests
 
 cd ../../../../../
 pwd
-cd github-api/tests
 ls -ltr
+cd github-api
+ls -ltr
+cd tests
 
 if [ "$TEST_FAILURE" -eq 1 ]; then
 	echo "Exiting with exit code 1..."
